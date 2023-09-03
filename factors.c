@@ -25,7 +25,7 @@ int main (int argc, char *argv[])
 		if (num % 2 == 0)
 		{
 			quot = num / 2;
-			printf("%ld=%ld * 2\n", num, quot);
+			printf("%ld=%ld*2\n", num, quot);
 			continue;
 		}
 		for (i = 3; i <= sq; i += 2)
@@ -33,7 +33,7 @@ int main (int argc, char *argv[])
 			if (num % i == 0)
 			{
 				quot = num / i;
-				printf("%ld = %ld * %ld\n", num, i,  quot);
+				printf("%ld=%ld*%ld\n", num, i,  quot);
 				break;
 			}
 		}
