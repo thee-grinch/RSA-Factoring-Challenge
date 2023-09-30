@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+"""this module is for factorising numbers as fast as possible"""
+from sys import argv
+
 
 def factorise(num):
+    """prints a number decomposed"""
+    if num < 2:
+        return
     if (num % 2) == 0:
         print("{:.0f}={:.0f}*2".format(num, num / 2))
     else:
@@ -8,9 +14,15 @@ def factorise(num):
         while num % i != 0:
             i += 2
         print("{:.0f}={:.0f}*{:.0f}".format(num, num / i, i))
-import sys
-with open(sys.argv[1], "r") as file:
-    data = file.readlines()
-    for line in data:
-        number = int(line)
-        factorise(number)
+
+if len(argv) != 2:
+    exit()
+
+try:
+    with open(argv[1], "r") as file:
+        data = file.readlines()
+        for line in data:
+            number = int(line)
+            factorise(number)
+except Exception:
+    pass
