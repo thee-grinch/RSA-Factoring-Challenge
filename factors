@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# is a factors challenge
+# is a challenge to find factors using the rsa algorithm
 
 check_factor()
 {
